@@ -368,6 +368,15 @@ section {
   }
 }
 
+/* Estilos para dispositivos móveis (max-width: 768px, por exemplo) */
+@media (max-width: 768px) {
+  .map-container {
+    margin-top: 0; /* Redefine a margem superior */
+    margin-left: 0; /* Redefine a margem esquerda */
+    position: relative; /* Define a posição como relativa para o posicionamento do mapa */
+  }
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 400px) {
   header {
