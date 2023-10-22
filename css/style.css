@@ -321,12 +321,6 @@ section {
   background-color: #184ad3;
 }
 
-/*SEÇÃO MAPA CURITIBA*/
-.map-container {
-  margin-top: -240px;
-  margin-left: 120px;
-}
-
 /* MEDIA QUERIES */
 @media (max-width: 1200px) {
   html {
