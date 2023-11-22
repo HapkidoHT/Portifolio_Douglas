@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap");
 :root {
-  --blue: #184ad3;
+  --blue: #368ee7;
 }
 * {
   font-family: "Azeret Mono", monospace;
@@ -31,7 +31,7 @@ html::-webkit-scrollbar-thumb {
   background: var(--blue);
 }
 body {
-  background: rgb(0, 0, 0);
+  background: rgb(39, 39, 39);
   overflow-x: hidden;
   padding-left: 35rem;
 }
@@ -82,7 +82,7 @@ header .navbar ul li a {
   border-radius: 5rem;
 }
 header .navbar ul li a:hover {
-  background: var(--blue);
+  background-color: #184ad3;
 }
 
 /*  MENU BURGUER */
@@ -138,7 +138,7 @@ section {
   font-size: 1.8rem;
 }
 .btn:hover {
-  background: var(--blue);
+  background-color: #184ad3;
 }
 
 /* SEÇÃO SOBRE  */
@@ -169,10 +169,12 @@ section {
   font-size: 2rem;
   color: var(--blue);
   padding: 1rem 0;
-  font-weight: normal;
+  font-weight: bold;
 }
+
 .sobre .row .info h3 span {
   color: #eee;
+  font-weight: bold;
   padding: 0 0.5rem;
   margin-right: 0px; /* Você pode ajustar o valor conforme necessário */
 }
@@ -185,18 +187,19 @@ section {
 }
 .sobre .row .habilidades .box {
   width: 20rem;
-  background: #184ad3;
+  background: #368ee7;
   text-align: center;
   padding: 1rem;
   margin: 1rem;
 }
 .sobre .row .habilidades .box span {
   font-size: 3rem;
+  font-weight: bold;
   color: #ffffff;
 }
 .sobre .row .habilidades .box h3 {
   font-size: 2rem;
-  color: black;
+  color: white;
 }
 
 /* SEÇÃO PORTFOLIO */
@@ -214,7 +217,7 @@ section {
   margin: 2rem;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: inset 0 0 1em gold;
+  /*box-shadow: inset 0 0 1em gold;*/
 }
 .portfolio .box-conteudo img {
   height: 100%;
@@ -246,13 +249,21 @@ section {
 .contato .row form .box {
   padding: 1rem;
   margin: 1rem 0;
-  background: rgb(241, 241, 241);
-  color: black;
+  background: rgba(
+    39,
+    39,
+    39,
+    0.2
+  ); /* 0.2 é a opacidade, você pode ajustar conforme necessário */
+  color: white; /* Alterando a cor do texto para branco */
+  font-weight: bold;
   text-transform: none;
   font-size: 1.5rem;
   width: 100%;
   box-shadow: inset 0 0 1em rgb(147, 147, 148);
+  border: 1px solid black; /* Adicionando bordas pretas */
 }
+
 .contato .row form .box::placeholder {
   text-transform: capitalize;
 }
@@ -262,7 +273,7 @@ section {
 }
 .contato .row .conteudo .title {
   text-transform: uppercase;
-  color: cornsilk;
+  color: white;
   font-size: 3rem;
   padding-bottom: 2rem;
 }
@@ -272,7 +283,7 @@ section {
   font-size: 2rem;
   color: #eee;
   padding: 1rem 0;
-  font-weight: normal;
+  font-weight: bold;
 }
 .contato .row .conteudo .info h3 i {
   padding-right: 1rem;
@@ -306,7 +317,7 @@ section {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: #005f91;
+  background-color: #368ee7;
   margin-top: 0px;
   width: 40px;
   height: 40px;
