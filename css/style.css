@@ -191,7 +191,9 @@ section {
   text-align: center;
   padding: 1rem;
   margin: 1rem;
+  border-radius: 10px;
 }
+
 .sobre .row .habilidades .box span {
   font-size: 3rem;
   font-weight: bold;
@@ -217,7 +219,6 @@ section {
   margin: 2rem;
   overflow: hidden;
   cursor: pointer;
-  /*box-shadow: inset 0 0 1em gold;*/
 }
 .portfolio .box-conteudo img {
   height: 100%;
