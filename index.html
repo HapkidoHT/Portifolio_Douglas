@@ -19,8 +19,51 @@
         .postagem {
             font-weight: bold;
         }
-    </style>
 
+        .box i {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .sobre .row .habilidades {
+            flex: 1 1 48rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .sobre .row .habilidades .box {
+            width: 200px;
+            text-align: center;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #1d85e8, #2ca0ff);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .sobre .row .habilidades .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .sobre .row .habilidades .box span {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .sobre .row .habilidades .box h3 {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -44,97 +87,133 @@
     <!-- MENU BURGUER   -->
     <div id="menu" class="fas fa-bars"></div>
 
-    <!-- HOME    -->
+    <!-- HOME -->
     <section class="home" id="home">
-        <h3>Olá!</h3>
-        <h1>Eu sou <span>Douglas Godoi<span< /h1>
-                    <p>Analista de dados. </p>
-                    <p>Estudante de Análise e Desenvolvimento de Sistemas pela UNINTER,
-                        cursando Front-end Development pela Origamid.</p>
-                    <p>Formado em Automação Industrial pela Universidade Positivo,
-                        Pós-graduado em Engenharia de Manutenção e Sistemas 4.0 pela UniSenai.</p>
+        <div class="container">
+            <h3>Bem-vindo!</h3>
+            <h1>Eu sou <span>Douglas Godoi</span></h1>
+            <p>Analista de Dados</p>
+            <p>Sou formado em Automação Industrial pela Universidade Positivo e pós-graduado em Engenharia de Manutenção e Sistemas 4.0 pela UniSenai.</p>
+        </div>
+        <div class="skills-marquee">
+            <div class="marquee">
+                <i class="fab fa-python"></i>
+                <i class="fas fa-database"></i>
+                <i class="fab fa-docker"></i>
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-git-alt"></i>
+                <i class="fab fa-cuttlefish"></i>
+                <i class="fab fa-figma"></i>
+                <i class="fas fa-microchip"></i>
+                <i class="fas fa-chart-line"></i>
+                <i class="fas fa-file-excel"></i>
+            </div>
+        </div>
     </section>
 
     <!-- SOBRE    -->
+    <!-- SOBRE -->
     <section class="sobre" id="sobre">
         <h1 class="heading"><span>Quem sou </span>Eu?</h1>
         <div class="row">
             <div class="info">
-                <h3> <span> Nome : </span>Douglas Godoi</h3>
-                <h3> <span> Idade : </span>28 anos</h3>
-                <h3> <span> Status: </span> Casado</h3>
-                <h3> <span> Formação : </span>Análise e Desenvolvimento de Sistemas</h3>
-                <h3> <span> Job : </span>Analista de dados <!--| <a href="https://www.positivotecnologia.com.br/" style="color: white;">Positivo Tecnologia</a>-->
-                </h3>
-                <h3> <span> Hobbies : </span>Artes Marciais - Hapkido | Música - Rock n' Roll | Jogos - RPG, MMORPG, FPS.</h3>
-                <!--Redes Sociais / Profissionais-->
-                <div class="social-icons">
-                    <h3> <span> Redes Profissionais: </span><a href="https://github.com/HapkidoHT" class="social-icon"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/douglas-degodoi" class="social-icon"><i class="fab fa-linkedin-in"></i></a></h3>
+                <div class="info-item">
+                    <h3><span>Nome:</span> Douglas Godoi</h3>
                 </div>
-
-                <!--Curriculo em PDF-->
+                <div class="info-item">
+                    <h3><span>Idade:</span> 28 anos</h3>
+                </div>
+                <div class="info-item">
+                    <h3><span>Status:</span> Casado</h3>
+                </div>
+                <div class="info-item">
+                    <h3><span>Formação:</span> Análise e Desenvolvimento de Sistemas</h3>
+                </div>
+                <div class="info-item">
+                    <h3><span>Job:</span> Analista de dados</h3>
+                </div>
+                <div class="info-item">
+                    <h3><span>Hobbies:</span> Artes Marciais - Hapkido | Música - Rock n' Roll | Jogos - RPG, MMORPG, FPS</h3>
+                </div>
+                <div class="social-icons">
+                    <h3><span>Redes Profissionais:</span></h3>
+                    <a href="https://github.com/HapkidoHT" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/douglas-degodoi" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
                 <a href="documentos/curriculo_douglas.pdf"><button class="btn">Download CV <i class="fas fa-download"></i></button></a>
             </div>
             <div class="habilidades">
                 <div class="box">
-                    <span>2</span>
-                    <h3>Projetos em Desenv</h3>
+                    <i class="fas fa-chart-line"></i>
+                    <span>Power BI</span>
+                    <h3>Advanced</h3>
                 </div>
                 <div class="box">
-                    <span>+7Anos</span>
-                    <h3>De Estudos</h3>
+                    <i class="fas fa-file-excel"></i>
+                    <span>Excel</span>
+                    <h3>Advanced</h3>
                 </div>
                 <div class="box">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                    <h3>Intermediary</h3>
+                </div>
+                <div class="box">
+                    <i class="fas fa-database"></i>
+                    <span>Pandas</span>
+                    <h3>Intermediary</h3>
+                </div>
+                <div class="box">
+                    <i class="fas fa-code"></i>
+                    <span>VBA</span>
+                    <h3>Advanced</h3>
+                </div>
+                <div class="box">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                    <h3>Consultas</h3>
+                </div>
+                <div class="box">
+                    <i class="fab fa-docker"></i>
+                    <span>Docker</span>
+                    <h3>Basic</h3>
+                </div>
+                <div class="box">
+                    <i class="fab fa-html5"></i>
                     <span>HTML</span>
                     <h3>Intermediary</h3>
                 </div>
                 <div class="box">
+                    <i class="fab fa-css3-alt"></i>
                     <span>CSS</span>
                     <h3>Intermediary</h3>
                 </div>
                 <div class="box">
+                    <i class="fab fa-js"></i>
                     <span>JS</span>
-                    <h3>Beginner<h3>
+                    <h3>Beginner</h3>
                 </div>
                 <div class="box">
+                    <i class="fab fa-git-alt"></i>
                     <span>GIT</span>
-                    <h3>Intermediary<h3>
+                    <h3>Intermediary</h3>
                 </div>
                 <div class="box">
+                    <i class="fab fa-cuttlefish"></i>
                     <span>C</span>
-                    <h3>Intermediary<h3>
+                    <h3>Intermediary</h3>
                 </div>
                 <div class="box">
-                    <span>Python</span>
-                    <h3>Intermediary<h3>
-                </div>
-                <div class="box">
-                    <span>Pandas</span>
-                    <h3>Beginner<h3>
-                </div>
-                <div class="box">
+                    <i class="fab fa-figma"></i>
                     <span>Figma</span>
-                    <h3>Advanced<h3>
-                </div>
-                <div class="box">
-                    <span>Arduino</span>
-                    <h3>Intermediary<h3>
-                </div>
-                <div class="box">
-                    <span>Power BI</span>
-                    <h3>Advanced<h3>
-                </div>
-                <div class="box">
-                    <span>VBA</span>
-                    <h3>Intermediary<h3>
-                </div>
-                <div class="box">
-                    <span>Excel</span>
-                    <h3>Advanced<h3>
+                    <h3>Intermediary</h3>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- PORTFOLIO   -->
     <section class="portfolio" id="portfolio">
@@ -158,7 +237,6 @@
                     <img src="img/menzie.jpg" alt=""></a>
             </div>
         </div>
-
     </section>
 
     <!-- CONTATO   -->
@@ -181,7 +259,6 @@
                 <button type="submit" class="btn"> Enviar Mensagem <i class="fas fa-paper-plane"></i> </button>
             </form>
         </div>
-
     </section>
 
     <!--Rodapé-->
