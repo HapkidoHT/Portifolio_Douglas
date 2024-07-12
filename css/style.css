@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap");
 
 :root {
-  --blue: #368ee7;
+  --blue: #5b8dbe;
 }
 
 * {
@@ -17,8 +17,11 @@
 }
 
 *::selection {
-  background: var(--blue);
-  color: #353434;
+  background: linear-gradient(
+    135deg,
+    #0a0c0f,
+    #2e3a46
+  ); /* Degradê para o fundo do corpo */
 }
 
 html {
@@ -39,7 +42,11 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: #1f1f1f;
+  background: linear-gradient(
+    135deg,
+    #0a0c0f,
+    #2e3a46
+  ); /* Degradê para o fundo do corpo */
   overflow-x: hidden;
   padding-left: 35rem;
 }
@@ -51,7 +58,7 @@ header {
   z-index: 1000;
   height: 100%;
   width: 40rem;
-  background: #0d4680;
+  background: #34495e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,14 +98,14 @@ header .navbar ul li a {
   display: block;
   padding: 1rem;
   margin: 1.5rem 0;
-  background: #368ee7;
+  background: #3b648d;
   color: #fff;
   font-size: 2rem;
   border-radius: 5rem;
 }
 
 header .navbar ul li a:hover {
-  background-color: #184ad3;
+  background-color: #5b8dbe;
 }
 
 /*  MENU BURGUER */
@@ -106,7 +113,7 @@ header .navbar ul li a:hover {
   position: fixed;
   top: 2rem;
   right: 2rem;
-  background: #368ee7;
+  background: #3b648d;
   color: #fff;
   cursor: pointer;
   font-size: 2.5rem;
@@ -149,7 +156,7 @@ section {
 
 .btn {
   padding: 0.7rem 2rem;
-  background: #368ee7;
+  background: #3b648d;
   color: #fff;
   cursor: pointer;
   margin-top: 3rem;
@@ -163,12 +170,18 @@ section {
 }
 
 .btn:hover {
-  background-color: #184ad3;
+  background-color: #5b8dbe;
 }
 
 /* SEÇÃO SOBRE */
-.sobre {
-  background-color: #1f1f1f;
+.sobre,
+.portfolio,
+.contato {
+  background: linear-gradient(
+    135deg,
+    #0a0c0f,
+    #2e3a46
+  ); /* Degradê para o fundo do corpo */
   padding: 60px 20px;
 }
 
@@ -183,7 +196,9 @@ section {
   color: var(--blue);
 }
 
-.sobre .row {
+.sobre .row,
+.portfolio .box-conteudo,
+.contato .row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -193,11 +208,11 @@ section {
 .sobre .info {
   flex: 1 1 35%; /* Ajuste conforme necessário */
   padding: 20px;
-  background: #2a2a2a;
+  background: #34495e;
   border-radius: 10px;
   margin-top: 55px; /* Adicione esta linha para mover a caixa para baixo */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #fff;
+  color: black;
   margin-left: 70px; /* Adicione ou ajuste esta linha para mover a caixa mais para a direita */
 }
 
@@ -208,43 +223,61 @@ section {
 .sobre .info-item h3 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: var(--blue);
+  color: black;
 }
 
 .sobre .info-item h3 span {
-  color: #fff;
+  color: white;
   font-weight: bold;
   margin-right: 10px;
 }
 
 .sobre .social-icons {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .sobre .social-icons h3 {
   font-size: 2rem;
-  color: var(--blue);
+  color: white;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.sobre .social-icons h3 span {
+  margin-right: 10px; /* Espaçamento entre o texto e os ícones */
 }
 
 .social-icon {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: #368ee7;
-  margin-top: 10px;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   margin-left: 10px;
   font-size: 20px;
   color: #fff;
   text-decoration: none;
   transition: background-color 0.3s;
+  border-radius: 5px; /* Make the icons square */
 }
 
-.social-icon:hover {
-  background-color: #184ad3;
+.social-icon.github {
+  background-color: #333; /* GitHub color */
+}
+
+.social-icon.github:hover {
+  background-color: #555;
+}
+
+.social-icon.linkedin {
+  background-color: #0e76a8; /* LinkedIn color */
+}
+
+.social-icon.linkedin:hover {
+  background-color: #005582;
 }
 
 .habilidades {
@@ -261,13 +294,14 @@ section {
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  background: rgba(41, 125, 228, 0.8);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #34495e;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .habilidades .box:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: #34495e;
 }
 
 .habilidades .box i {
@@ -283,16 +317,22 @@ section {
   display: block;
 }
 
-.habilidades .box h3 {
-  font-size: 1.2rem;
-  color: #fff;
+.habilidades .box .progress-bar {
+  width: 100%;
+  background-color: #34495e;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 10px;
+}
+
+.habilidades .box .progress {
+  height: 100%;
+  background-color: #587a9c;
+  border-radius: 5px;
 }
 
 /* SEÇÃO PORTFOLIO */
-.portfolio {
-  background-color: #1f1f1f;
-}
-
 .portfolio .box-conteudo {
   display: flex;
   align-items: center;
@@ -319,93 +359,157 @@ section {
 .portfolio .box-conteudo .box:hover img {
   transform: scale(1.2);
 }
+/* Estilo para a barra de progresso externa */
+.habilidades .progress-bar {
+  background-color: #34495e; /* Cor de fundo da barra externa */
+  border-radius: 0; /* Cantos quadrados */
+  overflow: hidden; /* Mantém o preenchimento interno dentro dos limites */
+  height: 20px; /* Altura fixa para a barra de progresso */
+  margin-top: 5px; /* Espaço acima da barra */
+  position: relative; /* Para posicionamento absoluto do preenchimento */
+}
 
-/* SEÇÃO FORMULARIO */
+/* Estilo para a barra de progresso interna */
+.habilidades .progress {
+  background-color: #34495e; /* Cor de preenchimento da barra */
+  height: 100%;
+  width: 0; /* Largura inicial para animação */
+  border-radius: 0; /* Cantos quadrados */
+  background-image: repeating-linear-gradient(
+    90deg,
+    #2b4157 0px,
+    #2b4157 9px,
+    #798c9e 9px,
+    #798c9e 10px
+  ); /* Efeito quadriculado com bordas brancas sutis */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra interna para efeito 3D */
+  transition: width 0.5s ease-in-out; /* Transição suave para a largura */
+}
+
+/* Seção Contato */
 .contato {
-  background-color: #1f1f1f;
+  background: linear-gradient(
+    135deg,
+    #0a0c0f,
+    #2e3a46
+  ); /* Degradê para o fundo do corpo */
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.contato .heading {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.contato .heading span {
+  color: var(--blue);
 }
 
 .contato .row {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.contato .row .conteudo {
-  flex: 1 1 30rem;
-  padding: 12rem;
-  padding-bottom: 0;
+.contato .conteudo {
+  flex: 1 1 25%; /* Ajuste o tamanho do box */
+  padding: 20px;
+  background: #34495e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  margin-right: 20px; /* Ajuste o espaçamento à direita */
+  margin-top: 20px; /* Ajuste o espaçamento acima */
+  margin-left: 80px;
 }
 
-.contato .row form {
-  flex: 1 1 45rem;
-  padding: 4rem;
-  margin: 2rem;
-  padding-bottom: 2rem;
+.contato .conteudo .title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ecf0f1;
 }
 
-.contato .row form .box {
-  padding: 1rem;
-  margin: 1rem 0;
-  background: rgba(
-    39,
-    39,
-    39,
-    0.2
-  ); /* 0.2 é a opacidade, você pode ajustar conforme necessário */
-  color: white; /* Alterando a cor do texto para branco */
-  font-weight: bold;
-  text-transform: none;
-  font-size: 1.5rem;
+.contato .conteudo .info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contato .conteudo .info h3 i {
+  margin-right: 10px;
+  color: #5b8dbe;
+}
+
+.contato .conteudo .info h3 a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.contato .conteudo .info h3 a:hover {
+  text-decoration: underline;
+}
+
+.contato form {
+  flex: 1 1 50%; /* Ajuste o tamanho do form */
+  padding: 20px;
+  background: #34495e;
+  border-radius: 10px;
+  box-shadow: #34495e;
+  margin-top: 20px; /* Ajuste o espaçamento acima */
+  margin-left: 80px;
+}
+
+.contato form .box {
   width: 100%;
-  box-shadow: inset 0 0 1em rgb(147, 147, 148);
-  border: 1px solid black; /* Adicionando bordas pretas */
-  border-radius: 4px;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background: #5b8dbe;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
 }
 
-.contato .row form .box::placeholder {
-  text-transform: capitalize;
+.contato form .box::placeholder {
+  color: #bdc3c7;
 }
 
-.contato .row form .message {
-  height: 15rem;
+.contato form .box.message {
+  height: 150px;
   resize: none;
 }
 
-.contato .row .conteudo .title {
-  text-transform: uppercase;
-  color: white;
-  font-size: 3rem;
-  padding-bottom: 2rem;
-}
-
-.contato .row .conteudo .info h3 {
+.contato form .btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  background: #3b648d;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-top: 10px;
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  color: #eee;
-  padding: 1rem 0;
-  font-weight: bold;
+  justify-content: center;
 }
 
-.contato .row .conteudo .info h3 i {
-  padding-right: 1rem;
-  color: var(--blue);
+.contato form .btn i {
+  margin-left: 10px;
 }
 
-.contato .row .conteudo {
-  padding-top: 1px;
-  padding-bottom: 20rem;
-}
-
-.secao-contato {
-  margin-top: -20px;
+.contato form .btn:hover {
+  background: #5b8dbe;
 }
 
 /* SEÇÃO PARA RODA-PÉ */
 .footer {
-  background-color: #333;
+  background: #34495e;
   color: #fff;
   padding: 10px;
   margin-top: 0px;
@@ -424,11 +528,11 @@ section {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: #368ee7;
+  background-color: #587a9c;
   margin-top: 0px;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 5px; /* Ícones quadrados */
   margin-left: 10px;
   font-size: 20px;
   color: #fff;
@@ -436,13 +540,25 @@ section {
   transition: background-color 0.3s;
 }
 
-.social-icon:hover {
-  background-color: #184ad3;
+.social-icon.github {
+  background-color: #333; /* GitHub color */
+}
+
+.social-icon.github:hover {
+  background-color: #555;
+}
+
+.social-icon.linkedin {
+  background-color: #0e76a8; /* LinkedIn color */
+}
+
+.social-icon.linkedin:hover {
+  background-color: #005582;
 }
 
 /* SKILLS MARQUEE */
 .skills-marquee {
-  width: 80%;
+  width: 50%;
   overflow: hidden;
   position: relative;
   margin: 40px auto;
@@ -476,7 +592,7 @@ section {
 .marquee i {
   font-size: 3rem;
   margin: 0 30px;
-  color: var(--blue);
+  color: #34495e;
 }
 
 @keyframes marquee {

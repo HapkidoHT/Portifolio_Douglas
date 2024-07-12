@@ -40,7 +40,7 @@
             padding: 20px;
             margin: 15px;
             border-radius: 10px;
-            background: linear-gradient(135deg, #1d85e8, #2ca0ff);
+            background: #587a9c;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -132,86 +132,107 @@
                     <h3><span>Formação:</span> Automação e Engenharia de Manutenção</h3>
                 </div>
                 <div class="info-item">
-                    <h3><span>Job:</span> Analista de dados</h3>
+                    <h3><span>Profissão:</span> Analista de dados</h3>
                 </div>
                 <div class="info-item">
                     <h3><span>Hobbies:</span> Artes Marciais - Hapkido | Música - Rock n' Roll | Jogos - RPG, MMORPG, FPS</h3>
                 </div>
                 <div class="social-icons">
-                    <h3><span>Redes Profissionais:</span></h3>
-                    <a href="https://github.com/HapkidoHT" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/douglas-degodoi" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <h3><span>Redes Profissionais:</span>
+                        <a href="https://github.com/HapkidoHT" class="social-icon github"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/douglas-degodoi" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </h3>
                 </div>
+
                 <a href="documentos/curriculo_douglas.pdf"><button class="btn">Download CV <i class="fas fa-download"></i></button></a>
             </div>
             <div class="habilidades">
                 <div class="box">
                     <i class="fas fa-chart-line"></i>
                     <span>Power BI</span>
-                    <h3>Advanced</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div> <!-- Avançado -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fas fa-file-excel"></i>
                     <span>Excel</span>
-                    <h3>Advanced</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%;"></div> <!-- Avançado -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fab fa-python"></i>
                     <span>Python</span>
-                    <h3>Intermediary</h3>
-                </div>
-                <div class="box">
-                    <i class="fas fa-database"></i>
-                    <span>Pandas</span>
-                    <h3>Intermediary</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div> <!-- Intermediário -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fas fa-code"></i>
                     <span>VBA</span>
-                    <h3>Advanced</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div> <!-- Avançado -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fas fa-database"></i>
                     <span>SQL</span>
-                    <h3>Consultas</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%;"></div> <!-- Básico -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fab fa-docker"></i>
                     <span>Docker</span>
-                    <h3>Basic</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%;"></div> <!-- Básico -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fab fa-html5"></i>
                     <span>HTML</span>
-                    <h3>Intermediary</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fab fa-css3-alt"></i>
                     <span>CSS</span>
-                    <h3>Intermediary</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fab fa-js"></i>
                     <span>JS</span>
-                    <h3>Beginner</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%;"></div> <!-- Básico -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fab fa-git-alt"></i>
                     <span>GIT</span>
-                    <h3>Intermediary</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fab fa-cuttlefish"></i>
                     <span>C</span>
-                    <h3>Intermediary</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                    </div>
                 </div>
                 <div class="box">
                     <i class="fab fa-figma"></i>
                     <span>Figma</span>
-                    <h3>Intermediary</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                    </div>
                 </div>
             </div>
-        </div>
+
     </section>
 
 
@@ -219,10 +240,10 @@
     <section class="portfolio" id="portfolio">
         <h1 class="heading"> Meu <span>Portfólio</span> </h1>
         <div class="box-conteudo">
-            <!--<div class="box">
+            <div class="box">
                 <a href="https://app.powerbi.com/view?r=eyJrIjoiNGIyNjM0NTgtZmI5ZC00ZjQ3LWFkMTYtMDljODdkZWQzMGMxIiwidCI6IjJlNDIyYTcwLWFiMWYtNDEzZC1hMGQwLWRjNWZjOWUyOTNhZSJ9">
                     <img src="img/DG_Case.jpg" alt=""></a>
-            </div>-->
+            </div>
             <div class="box">
                 <a href="https://app.powerbi.com/view?r=eyJrIjoiZGZhYmMyOGYtNTZlNC00NTg1LWFhZmItMzk3MmY2Zjc1ZGZlIiwidCI6IjJlNDIyYTcwLWFiMWYtNDEzZC1hMGQwLWRjNWZjOWUyOTNhZSJ9">
                     <img src="img/caseReclamações.jpg" alt=""></a>
