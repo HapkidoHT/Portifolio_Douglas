@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Douglas - Portfólio</title>
+
+    <!--Modal Style-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- font awesome cdn link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <!-- custom css file link-->
@@ -147,84 +151,86 @@
                 <a href="documentos/curriculo_douglas.pdf"><button class="btn">Download CV <i class="fas fa-download"></i></button></a>
             </div>
             <div class="habilidades">
-                <div class="box">
+
+                <div class="box" data-info="DAX, Power Query, Linguagem M, Dashboards, ETL.">
                     <i class="fas fa-chart-line"></i>
                     <span>Power BI</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 90%;"></div> <!-- Avançado -->
                     </div>
                 </div>
-                <div class="box">
+
+                <div class="box" data-info="VBA, Power Query, ETL, Fórmulas.">
                     <i class="fas fa-file-excel"></i>
                     <span>Excel</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 100%;"></div> <!-- Avançado -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Pandas, Selenium, BeautifulSoup, Matplotlib, Numpy, Crawler, WebScraping, Machine Learning, IA, Análise de Dados.">
                     <i class="fab fa-python"></i>
                     <span>Python</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 80%;"></div> <!-- Intermediário -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Processos de ETL, desenvolvimento de sistemas.">
                     <i class="fas fa-code"></i>
                     <span>VBA</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 90%;"></div> <!-- Avançado -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Consultas e extração de informação.">
                     <i class="fas fa-database"></i>
                     <span>SQL</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 30%;"></div> <!-- Básico -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Virtualização de banco de dados.">
                     <i class="fab fa-docker"></i>
                     <span>Docker</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 30%;"></div> <!-- Básico -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Estrutura web, inspeção de sites, desenvolvimento de crawler.">
                     <i class="fab fa-html5"></i>
                     <span>HTML</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Estilização de sites.">
                     <i class="fab fa-css3-alt"></i>
                     <span>CSS</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Desenvolvimento de lógica.">
                     <i class="fab fa-js"></i>
                     <span>JS</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 30%;"></div> <!-- Básico -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Versionamento de software.">
                     <i class="fab fa-git-alt"></i>
                     <span>GIT</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Arduino, desenvolvimento de firmware, eletrônica.">
                     <i class="fab fa-cuttlefish"></i>
                     <span>C</span>
                     <div class="progress-bar">
                         <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
                     </div>
                 </div>
-                <div class="box">
+                <div class="box" data-info="Desenvolvimento de layout de Dashboards.">
                     <i class="fab fa-figma"></i>
                     <span>Figma</span>
                     <div class="progress-bar">
@@ -290,10 +296,41 @@
     </footer>
     </div>
 
-    <!-- jquery cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- custom js file link  -->
-    <script src="js/script.js"></script>
+
+    <!-- Modal para habilidades -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Aplicação de Habilidades:</h2>
+            <div id="skillInfo">Detalhes da habilidade serão exibidos aqui...</div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.habilidades .box').click(function () {
+                // Pega a informação do atributo data-info
+                var info = $(this).data('info');
+
+                // Mostra a informação no modal
+                $('#skillInfo').text(info);
+                $('#skillModal').css('display', 'block');
+            });
+
+            $('.close').click(function () {
+                $('#skillModal').css('display', 'none');
+            });
+
+            $(window).click(function (event) {
+                if (event.target.id === 'skillModal') {
+                    $('#skillModal').css('display', 'none');
+                }
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>

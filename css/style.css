@@ -604,6 +604,70 @@ section {
   }
 }
 
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #587a9c;
+  margin: 15% auto; /* 15% do topo e centralizado */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Pode ser mais ou menos, dependendo do tamanho da tela */
+  font-family: "Calibri", sans-serif; /* Altera a família da fonte */
+  font-size: 22px; /* Altera o tamanho da fonte */
+  color: #000000; /* Define a cor do texto para cinza */
+}
+
+.modal-content h2 {
+  margin-top: 0; /* Remove margem superior para descolar do topo */
+  margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+  color: #fff; /* Cor branca para o título */
+  font-size: 28px; /* Tamanho maior para o título */
+}
+
+.modal-content p {
+  font-size: 20px; /* Tamanho de fonte menor para parágrafos */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px; /* Ajuste o tamanho da fonte aqui */
+  font-weight: bold;
+  font-family: "Arial", sans-serif; /* Altera a família da fonte */
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#saveSkillInfo {
+  background-color: #4caf50; /* Verde */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-family: "Arial", sans-serif; /* Altera a família da fonte */
+  font-size: 18px; /* Ajuste o tamanho da fonte */
+}
+
+#saveSkillInfo:hover {
+  opacity: 0.8;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1200px) {
   html {
