@@ -4,16 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Douglas - Portfólio</title>
-
-    <!--Modal Style-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- font awesome cdn link-->
+    <title>Douglas - Portfólio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <!-- custom css file link-->
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-
     <style>
         .name {
             font-weight: bold;
@@ -39,19 +33,19 @@
         }
 
         .sobre .row .habilidades .box {
-            width: 200px;
+            width: 150px;
             text-align: center;
             padding: 20px;
             margin: 15px;
             border-radius: 10px;
             background: #587a9c;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(68, 62, 62, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .sobre .row .habilidades .box:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(54, 48, 48, 0.);
         }
 
         .sobre .row .habilidades .box span {
@@ -68,15 +62,12 @@
             margin-top: 10px;
         }
     </style>
+
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
-        <div class="avatar-user">
-            <img src="img/douglas.jpeg" alt="">
-            <h3 class="name">Douglas Godoi</h3>
-            <p class="postagem">Analista de Dados</p>
-        </div>
         <nav class="navbar">
             <ul>
                 <li><a href="#home">Inicio</a></li>
@@ -88,16 +79,20 @@
     </header>
     <!-- FIM DA SEÇÃO MENU -->
 
-    <!-- MENU BURGUER   -->
+    <!-- MENU BURGUER -->
     <div id="menu" class="fas fa-bars"></div>
 
     <!-- HOME -->
     <section class="home" id="home">
-        <div class="container">
+        <div class="avatar-user">
+            <img src="img/douglas.jpeg" alt="Douglas Godoi">
+        </div>
+        <div class="welcome-text">
             <h3>Bem-vindo!</h3>
             <h1>Eu sou <span>Douglas Godoi</span></h1>
-            <p>Analista de Dados</p>
-            <p>Sou formado em Automação Industrial pela Universidade Positivo e pós-graduado em Engenharia de Manutenção e Sistemas 4.0 pela UniSenai.</p>
+            <h3>Analista de Dados</h3>
+            <p>Sou formado em Automação Industrial pela Universidade Positivo</p>
+            <p> pós-graduado em Engenharia de Manutenção e Sistemas 4.0 pela UniSenai.</p>
         </div>
         <div class="skills-marquee">
             <div class="marquee">
@@ -113,11 +108,12 @@
                 <i class="fas fa-microchip"></i>
                 <i class="fas fa-chart-line"></i>
                 <i class="fas fa-file-excel"></i>
+                <i class="fas fa-code-branch"></i>
             </div>
         </div>
+
     </section>
 
-    <!-- SOBRE    -->
     <!-- SOBRE -->
     <section class="sobre" id="sobre">
         <h1 class="heading"><span>Quem sou </span>Eu?</h1>
@@ -147,102 +143,105 @@
                         <a href="https://www.linkedin.com/in/douglas-degodoi" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
                     </h3>
                 </div>
-
                 <a href="documentos/curriculo_douglas.pdf"><button class="btn">Download CV <i class="fas fa-download"></i></button></a>
             </div>
             <div class="habilidades">
-
                 <div class="box" data-info="DAX, Power Query, Linguagem M, Dashboards, ETL.">
                     <i class="fas fa-chart-line"></i>
                     <span>Power BI</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div> <!-- Avançado -->
+                        <div class="progress" style="width: 100%;"></div>
                     </div>
                 </div>
-
                 <div class="box" data-info="VBA, Power Query, ETL, Fórmulas.">
                     <i class="fas fa-file-excel"></i>
                     <span>Excel</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 100%;"></div> <!-- Avançado -->
+                        <div class="progress" style="width: 100%;"></div>
                     </div>
                 </div>
                 <div class="box" data-info="Pandas, Selenium, BeautifulSoup, Matplotlib, Numpy, Crawler, WebScraping, Machine Learning, IA, Análise de Dados.">
                     <i class="fab fa-python"></i>
                     <span>Python</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 80%;"></div> <!-- Intermediário -->
+                        <div class="progress" style="width: 80%;"></div>
                     </div>
                 </div>
                 <div class="box" data-info="Processos de ETL, desenvolvimento de sistemas.">
                     <i class="fas fa-code"></i>
                     <span>VBA</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 90%;"></div> <!-- Avançado -->
+                        <div class="progress" style="width: 90%;"></div>
                     </div>
                 </div>
-                <div class="box" data-info="Consultas e extração de informação.">
+                <div class="box" data-info="Comandos de consultas, manipulação de dados e extração de dados.">
                     <i class="fas fa-database"></i>
                     <span>SQL</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 30%;"></div> <!-- Básico -->
+                        <div class="progress" style="width: 45%;"></div>
                     </div>
                 </div>
                 <div class="box" data-info="Virtualização de banco de dados.">
                     <i class="fab fa-docker"></i>
                     <span>Docker</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 30%;"></div> <!-- Básico -->
+                        <div class="progress" style="width: 40%;"></div>
                     </div>
                 </div>
-                <div class="box" data-info="Estrutura web, inspeção de sites, desenvolvimento de crawler.">
+                <div class="box" data-info="Estrutura web, inspeção de sites para desenvolvimento de crawler e web-scraping.">
                     <i class="fab fa-html5"></i>
                     <span>HTML</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                        <div class="progress" style="width: 70%;"></div>
                     </div>
                 </div>
-                <div class="box" data-info="Estilização de sites.">
+                <div class="box" data-info="Desenvolvimento de estilos.">
                     <i class="fab fa-css3-alt"></i>
                     <span>CSS</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                        <div class="progress" style="width: 60%;"></div>
                     </div>
                 </div>
                 <div class="box" data-info="Desenvolvimento de lógica.">
                     <i class="fab fa-js"></i>
                     <span>JS</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 30%;"></div> <!-- Básico -->
+                        <div class="progress" style="width: 40%;"></div>
                     </div>
                 </div>
                 <div class="box" data-info="Versionamento de software.">
                     <i class="fab fa-git-alt"></i>
                     <span>GIT</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                        <div class="progress" style="width: 60%;"></div>
                     </div>
                 </div>
                 <div class="box" data-info="Arduino, desenvolvimento de firmware, eletrônica.">
                     <i class="fab fa-cuttlefish"></i>
                     <span>C</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                        <div class="progress" style="width: 70%;"></div>
                     </div>
                 </div>
                 <div class="box" data-info="Desenvolvimento de layout de Dashboards.">
                     <i class="fab fa-figma"></i>
                     <span>Figma</span>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 60%;"></div> <!-- Intermediário -->
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="box" data-info="Framework para desenvolvimento web.">
+                    <i class="fas fa-code-branch"></i>
+                    <span>Django</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 20%;"></div>
                     </div>
                 </div>
             </div>
-
+        </div>
     </section>
 
-
-    <!-- PORTFOLIO   -->
+    <!-- PORTFOLIO -->
     <section class="portfolio" id="portfolio">
         <h1 class="heading"> Meu <span>Portfólio</span> </h1>
         <div class="box-conteudo">
@@ -258,7 +257,6 @@
                 <a href="https://app.powerbi.com/view?r=eyJrIjoiYWI2YzA1NTgtZjBjMi00NmM4LWEyNzYtOWI2NTI2NGRlZDAxIiwidCI6IjJlNDIyYTcwLWFiMWYtNDEzZC1hMGQwLWRjNWZjOWUyOTNhZSJ9&embedImagePlaceholder=true">
                     <img src="img/CaseRH.jpg" alt=""></a>
             </div>
-
             <div class="box">
                 <a href="https://menzie-bolsas.netlify.app/">
                     <img src="img/menzie.jpg" alt=""></a>
@@ -266,7 +264,7 @@
         </div>
     </section>
 
-    <!-- CONTATO   -->
+    <!-- CONTATO -->
     <section class="contato" id="contato">
         <h1 class="heading"> <span>Onde me</span> Encontrar? </h1>
         <div class="row">
@@ -288,14 +286,12 @@
         </div>
     </section>
 
-    <!--Rodapé-->
+    <!-- Rodapé -->
     <footer class="footer">
         <div class="container">
             <p>Douglas Godoi &copy; 2024 Portfólio. Todos os direitos reservados. </p>
         </div>
     </footer>
-    </div>
-
 
     <!-- Modal para habilidades -->
     <div id="skillModal" class="modal">
@@ -306,31 +302,30 @@
         </div>
     </div>
 
-
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+            // Mostra o modal com informações quando uma habilidade é clicada
             $('.habilidades .box').click(function () {
-                // Pega a informação do atributo data-info
-                var info = $(this).data('info');
-
-                // Mostra a informação no modal
-                $('#skillInfo').text(info);
-                $('#skillModal').css('display', 'block');
+                var info = $(this).data('info'); // Pega a informação do atributo data-info
+                $('#skillInfo').text(info); // Atualiza o texto dentro do modal com a informação
+                $('#skillModal').css('display', 'block'); // Mostra o modal
             });
 
+            // Fecha o modal quando o ícone de fechar é clicado
             $('.close').click(function () {
                 $('#skillModal').css('display', 'none');
             });
 
+            // Fecha o modal quando clicado fora dele
             $(window).click(function (event) {
-                if (event.target.id === 'skillModal') {
+                if ($(event.target).is('#skillModal')) {
                     $('#skillModal').css('display', 'none');
                 }
             });
         });
     </script>
-
-
 </body>
 
 </html>

@@ -17,11 +17,7 @@
 }
 
 *::selection {
-  background: linear-gradient(
-    135deg,
-    #0a0c0f,
-    #2e3a46
-  ); /* Degradê para o fundo do corpo */
+  background: linear-gradient(135deg, #0a0c0f, #2e3a46);
 }
 
 html {
@@ -42,70 +38,94 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  background: linear-gradient(
-    135deg,
-    #0a0c0f,
-    #2e3a46
-  ); /* Degradê para o fundo do corpo */
+  background: linear-gradient(135deg, #0a0c0f, #2e3a46);
   overflow-x: hidden;
-  padding-left: 35rem;
+  padding-top: 70px; /* Adiciona espaço no topo do corpo para evitar sobreposição com o cabeçalho */
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 15px;
-  z-index: 1000;
-  height: 100%;
-  width: 40rem;
-  background: #34495e;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #34495e;
+  width: 100%;
+  position: fixed; /* Fixa o cabeçalho no topo */
+  top: 0; /* Posiciona no topo da página */
+  left: 0; /* Alinha à esquerda da página */
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros conteúdos */
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-flow: column;
+  padding: 2rem;
   text-align: center;
 }
 
-header .avatar-user img {
-  height: 30rem;
-  width: 30rem;
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  padding: 0 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: var(--blue);
+}
+
+.avatar-user {
+  display: flex;
+  align-items: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column; /* Muda a direção do flex para coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  padding: 2rem;
+  text-align: center;
+}
+
+.welcome-text {
+  max-width: 80%; /* Ajusta a largura máxima do texto */
+}
+
+.home h3,
+.home h1,
+.home p {
+  color: #fff;
+}
+
+.home h1 span {
+  color: var(--blue);
+}
+
+.avatar-user img {
+  height: 40rem; /* Aumenta a altura da imagem */
+  width: 40rem; /* Aumenta a largura da imagem */
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
-  border: 0.7rem solid var(--blue);
+  margin-right: 1rem;
+  margin-bottom: 4rem; /* Adiciona espaço entre a imagem e o texto */
 }
 
-header .avatar-user .name {
-  font-size: 4rem;
-  color: #fff;
-}
-
-header .avatar-user .postagem {
-  font-size: 2rem;
-  color: #fff;
-}
-
-header .navbar {
-  width: 100%;
-}
-
-header .navbar ul {
-  list-style: none;
-  padding: 1rem 1rem;
-}
-
-header .navbar ul li a {
-  display: block;
-  padding: 1rem;
-  margin: 1.5rem 0;
-  background: #3b648d;
-  color: #fff;
-  font-size: 2rem;
-  border-radius: 5rem;
-}
-
-header .navbar ul li a:hover {
-  background-color: #5b8dbe;
+.home .avatar-user img {
+  height: 25rem; /* Aumenta a altura da imagem */
+  width: 25rem; /* Aumenta a largura da imagem */
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /*  MENU BURGUER */
@@ -135,8 +155,9 @@ section {
 }
 
 .home h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #fff;
+  margin-bottom: 4rem;
 }
 
 .home h1 {
@@ -150,7 +171,7 @@ section {
 
 .home p {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 1rem 0;
 }
 
@@ -208,12 +229,12 @@ section {
 .sobre .info {
   flex: 1 1 35%; /* Ajuste conforme necessário */
   padding: 20px;
-  background: #34495e;
+  /*background: #587a9c;*/
   border-radius: 10px;
   margin-top: 55px; /* Adicione esta linha para mover a caixa para baixo */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: black;
-  margin-left: 70px; /* Adicione ou ajuste esta linha para mover a caixa mais para a direita */
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+  color: #587a9c;
+  margin-left: 10px; /* Adicione ou ajuste esta linha para mover a caixa mais para a direita */
 }
 
 .sobre .info-item {
@@ -223,11 +244,12 @@ section {
 .sobre .info-item h3 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: black;
+  color: #fff;
+  letter-spacing: 0.1em; /* Ajuste este valor conforme necessário */
 }
 
 .sobre .info-item h3 span {
-  color: white;
+  color: #587a9c;
   font-weight: bold;
   margin-right: 10px;
 }
@@ -294,7 +316,7 @@ section {
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  background: #34495e;
+  background: #587a9c;
   transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
@@ -319,7 +341,7 @@ section {
 
 .habilidades .box .progress-bar {
   width: 100%;
-  background-color: #34495e;
+  background-color: #ffffff;
   border-radius: 5px;
   overflow: hidden;
   height: 10px;
@@ -418,9 +440,9 @@ section {
 .contato .conteudo {
   flex: 1 1 25%; /* Ajuste o tamanho do box */
   padding: 20px;
-  background: #34495e;
+  /*background: #34495e;*/
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
   color: #fff;
   margin-right: 20px; /* Ajuste o espaçamento à direita */
   margin-top: 20px; /* Ajuste o espaçamento acima */
@@ -576,7 +598,7 @@ section {
 
 .skills-marquee::before {
   left: 0;
-  background: linear-gradient(to right, rgb(39, 39, 39), transparent);
+  background: linear-gradient(to right, rgb(39, 39, 39) transparent);
 }
 
 .skills-marquee::after {
@@ -613,50 +635,46 @@ section {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgb(19, 18, 18); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 .modal-content {
   background-color: #587a9c;
-  margin: 15% auto; /* 15% do topo e centralizado */
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 50%; /* Pode ser mais ou menos, dependendo do tamanho da tela */
-  font-family: "Calibri", sans-serif; /* Altera a família da fonte */
-  font-size: 22px; /* Altera o tamanho da fonte */
-  color: #000000; /* Define a cor do texto para cinza */
+  width: 80%; /* Could be more or less, depending on screen size */
+  font-family: "Calibri", sans-serif;
+  font-size: 22px;
+  color: #000000;
 }
 
 .modal-content h2 {
-  margin-top: 0; /* Remove margem superior para descolar do topo */
-  margin-bottom: 20px; /* Adiciona espaço abaixo do título */
-  color: #fff; /* Cor branca para o título */
-  font-size: 28px; /* Tamanho maior para o título */
-}
-
-.modal-content p {
-  font-size: 20px; /* Tamanho de fonte menor para parágrafos */
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 28px;
 }
 
 .close {
-  color: #aaa;
+  color: #000000;
   float: right;
-  font-size: 28px; /* Ajuste o tamanho da fonte aqui */
+  font-size: 28px;
   font-weight: bold;
-  font-family: "Arial", sans-serif; /* Altera a família da fonte */
+  font-family: "Arial", sans-serif;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: rgb(3, 3, 3);
   text-decoration: none;
   cursor: pointer;
 }
 
 #saveSkillInfo {
-  background-color: #4caf50; /* Verde */
-  color: white;
+  background-color: #000000; /* Verde */
+  color: rgb(255, 255, 255);
   padding: 12px 20px;
   border: none;
   cursor: pointer;
@@ -687,50 +705,65 @@ section {
   }
 
   #menu {
-    display: block;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #3b648d;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
   }
 
-  header.toggle {
-    left: 0%;
+  #menu {
+    display: none;
   }
 
-  /* ESTILO DA HOME */
-  body {
-    padding: 0;
-  }
-}
+  @media (max-width: 991px) {
+    #menu {
+      display: block;
+    }
 
-/* MEDIA QUERIES */
-@media (max-width: 700px) {
-  html {
-    font-size: 50%;
-  }
-}
+    .navbar {
+      display: none;
+    }
 
-/* Estilos para dispositivos móveis (max-width: 768px, por exemplo) */
-@media (max-width: 768px) {
-  .map-container {
-    margin-top: 0; /* Redefine a margem superior */
-    margin-left: 0; /* Redefine a margem esquerda */
-    position: relative; /* Define a posição como relativa para o posicionamento do mapa */
+    header.open .navbar {
+      display: block;
+    }
   }
-}
 
-/* MEDIA QUERIES */
-@media (max-width: 400px) {
-  header {
-    width: 100vw;
+  @media (max-width: 700px) {
+    html {
+      font-size: 50%;
+    }
   }
-  .heading {
-    margin: 0 3rem;
+
+  @media (max-width: 768px) {
+    .map-container {
+      margin-top: 0;
+      margin-left: 0;
+      position: relative;
+    }
   }
-  .sobre .row .habilidades .box {
-    width: 100%;
-  }
-  .portfolio .box-conteudo img {
-    width: 100%;
-  }
-  .contato .row .form {
-    margin: 3rem 0;
+
+  @media (max-width: 400px) {
+    header {
+      width: 100vw;
+    }
+    .heading {
+      margin: 0 3rem;
+    }
+    .sobre .row .habilidades .box {
+      width: 100%;
+    }
+    .portfolio .box-conteudo img {
+      width: 100%;
+    }
+    .contato .row .form {
+      margin: 3rem 0;
+    }
   }
 }

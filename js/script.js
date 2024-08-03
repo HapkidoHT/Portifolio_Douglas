@@ -1,25 +1,33 @@
 $(document).ready(function () {
-  // Funções de interação para o menu
   $("#menu").click(function () {
-    $(this).toggleClass("fa-times");
-    $("header").toggleClass("toggle");
+    $(this).toggleClass("active");
+    $("header").toggleClass("open");
+    $(".navbar").toggle(); // Alternar visibilidade do menu
   });
 
-  $(window).on("scroll load", function () {
-    $("#menu").removeClass("fa-times");
-    $("header").removeClass("toggle");
+  // Fecha o menu ao clicar fora
+  $(document).click(function (event) {
+    var target = $(event.target);
+    if (
+      !target.closest("header").length &&
+      !target.closest("#menu").length &&
+      $("header").hasClass("open")
+    ) {
+      $("#menu").removeClass("active");
+      $("header").removeClass("open");
+      $(".navbar").hide();
+    }
   });
-
-  // Inicia a animação das barras de progresso após um breve atraso
-  setTimeout(() => {
-    $(".habilidades .progress").each(function () {
-      var targetWidth = $(this).css("width"); // Captura a largura definida inline
-      $(this).css("width", "0").animate(
-        {
-          width: targetWidth,
-        },
-        2000 // Duração da animação de 2 segundos
-      );
-    });
-  }, 500); // Atraso de 500ms para garantir que todos os elementos estejam carregados
 });
+// Animação das barras de progresso
+setTimeout(() => {
+  $(".habilidades .progress").each(function () {
+    var targetWidth = $(this).data("width"); // Certifique-se de que o atributo data-width está definido
+    $(this).css("width", "0").animate(
+      {
+        width: targetWidth,
+      },
+      2000
+    );
+  });
+}, 500);
