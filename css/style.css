@@ -780,3 +780,72 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(68, 62, 62, 0.2);
 }
+
+/* Botão do WhatsApp no canto inferior direito */
+.whatsapp-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Estilo do mini chat */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho do mini chat */
+.chat-header {
+  background-color: #25d366;
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Corpo do mini chat */
+.chat-body {
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Rodapé do mini chat */
+.chat-footer {
+  padding: 10px;
+  text-align: center;
+}
+
+.chat-button {
+  background-color: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.chat-button:hover {
+  background-color: #1da851;
+}
