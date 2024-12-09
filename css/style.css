@@ -848,4 +848,20 @@ section {
 
 .chat-button:hover {
   background-color: #1da851;
+} /* Efeito de movimento ao passar o mouse */
+.whatsapp-link:hover {
+  animation: pulse 0.6s infinite;
+}
+
+/* Animação de "pulsar" */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
