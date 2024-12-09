@@ -767,3 +767,16 @@ section {
     }
   }
 }
+
+/* ESTILO POSTAGEM LINKEDIN */
+.portfolio-embed {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.portfolio-embed iframe {
+  border: 2px solid #587a9c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(68, 62, 62, 0.2);
+}
