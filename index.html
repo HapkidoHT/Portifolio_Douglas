@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douglas - Portfólio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .name {
-            font-weight: bold;
-            margin-bottom: 10px;
+        /* Estilos globais */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
+        .name,
         .postagem {
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
         .box i {
@@ -46,30 +48,92 @@
 
         .sobre .row .habilidades .box:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(54, 48, 48, 0.);
+            box-shadow: 0 8px 16px rgba(54, 48, 48, 0.2);
+        }
+
+        .sobre .row .habilidades .box span,
+        .sobre .row .habilidades .box h3 {
+            color: #ffffff;
+            margin-top: 10px;
         }
 
         .sobre .row .habilidades .box span {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #ffffff;
             display: block;
-            margin-top: 10px;
         }
 
         .sobre .row .habilidades .box h3 {
             font-size: 1.2rem;
-            color: #ffffff;
-            margin-top: 10px;
+        }
+
+        /* Estilos para o menu burguer */
+        #menu {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: #3b648d;
+            color: #fff;
+            cursor: pointer;
+            font-size: 2.5rem;
+            padding: 1rem 1.5rem;
+            z-index: 1000;
+            display: none;
+        }
+
+        /* Estilos para o cabeçalho e navbar */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #333;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: none;
+        }
+
+        header.open .navbar {
+            display: block;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            #menu {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+            }
+
+            header.open .navbar {
+                display: block;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .navbar {
+                display: flex;
+            }
+
+            #menu {
+                display: none;
+            }
         }
     </style>
-
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <ul>
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -81,7 +145,7 @@
     <!-- FIM DA SEÇÃO MENU -->
 
     <!-- MENU BURGUER -->
-    <div id="menu" class="fas fa-bars"></div>
+    <div id="menu" class="fas fa-bars" onclick="toggleMenu()"></div>
 
     <!-- HOME -->
     <section class="home" id="home">
@@ -93,8 +157,8 @@
             <h1>Eu sou <span>Douglas Godoi</span></h1>
             <h3>Analista de Dados</h3>
             <p>Sou formado em Automação Industrial pela Universidade Positivo</p>
-            <p> pós-graduado em Engenharia de Manutenção e Sistemas 4.0 pela UniSenai</p>
-            <p> pós-graduando em Inteligência Artificial e Machine Learning pela Universidade Positivo.</p>
+            <p>pós-graduado em Engenharia de Manutenção e Sistemas 4.0 pela UniSenai</p>
+            <p>pós-graduando em Inteligência Artificial e Machine Learning pela Universidade Positivo.</p>
         </div>
         <div class="skills-marquee">
             <div class="marquee">
@@ -113,7 +177,6 @@
                 <i class="fas fa-code-branch"></i>
             </div>
         </div>
-
     </section>
 
     <!-- SOBRE -->
@@ -148,7 +211,7 @@
                 <a href="documentos/curriculo_douglas.pdf"><button class="btn">Download CV <i class="fas fa-download"></i></button></a>
             </div>
 
-            <div class="habilidades">
+            <div class="habilidades" style="cursor: pointer;">
                 <div class="box" data-info="DAX, Power Query, Linguagem M, Dashboards, ETL.">
                     <i class="fas fa-chart-line"></i>
                     <span>Power BI</span>
@@ -260,7 +323,6 @@
         <div class="portfolio-embed">
             <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7271917555643031553" height="641" width="504" frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
         </div>
-
     </section>
 
     <!-- CONTATO -->
@@ -283,30 +345,24 @@
                 <button type="submit" class="btn"> Enviar Mensagem <i class="fas fa-paper-plane"></i> </button>
             </form>
         </div>
-
     </section>
 
     <!--Botão WHATS APP-->
-    <a href="https://wa.me/5541996105506" target="_blank" class="whatsapp-link">
+    <a href="javascript:void(0);" onclick="toggleChat()" class="whatsapp-link">
         <i class="fab fa-whatsapp"></i>
-        <a href="#" class="whatsapp-link" onclick="toggleChat()">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <div class="chat-popup" id="chatPopup">
-            <div class="chat-header">
-                <span>Atendimento</span>
-                <button onclick="toggleChat()">✖</button>
-            </div>
-            <div class="chat-body">
-                <p>Olá, me chamo Douglas, profissional da área de dados. Vamos conversar?</p>
-            </div>
-            <div class="chat-footer">
-                <a href="https://wa.me/5541996105506" target="_blank" class="chat-button">Falar no WhatsApp</a>
-            </div>
-        </div>
-
     </a>
-
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header">
+            <span>Atendimento</span>
+            <button type="button" onclick="toggleChat()">✖</button>
+        </div>
+        <div class="chat-body">
+            <p>Olá, me chamo Douglas, profissional da área de dados. Vamos conversar?</p>
+        </div>
+        <div class="chat-footer">
+            <a href="https://wa.me/5541996105506" target="_blank" class="chat-button">Falar no WhatsApp</a>
+        </div>
+    </div>
 
     <!-- Rodapé -->
     <footer class="footer">
@@ -325,8 +381,18 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        }
+
+        function toggleChat() {
+            const chatPopup = document.getElementById('chatPopup');
+            chatPopup.style.display = chatPopup.style.display === 'block' ? 'none' : 'block';
+        }
+
         $(document).ready(function () {
             // Mostra o modal com informações quando uma habilidade é clicada
             $('.habilidades .box').click(function () {
@@ -346,16 +412,28 @@
                     $('#skillModal').css('display', 'none');
                 }
             });
+
+            $("#menu").click(function () {
+                $(this).toggleClass("active");
+                $("header").toggleClass("open");
+                $(".navbar").toggle(); // Alternar visibilidade do menu
+            });
+
+            // Fecha o menu ao clicar fora
+            $(document).click(function (event) {
+                var target = $(event.target);
+                if (
+                    !target.closest("header").length &&
+                    !target.closest("#menu").length &&
+                    $("header").hasClass("open")
+                ) {
+                    $("#menu").removeClass("active");
+                    $("header").removeClass("open");
+                    $(".navbar").hide();
+                }
+            });
         });
     </script>
-    <!--Script botão Whats-->
-    <script>
-        function toggleChat() {
-            const chatPopup = document.getElementById('chatPopup');
-            chatPopup.style.display = chatPopup.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
-
 </body>
 
 </html>
