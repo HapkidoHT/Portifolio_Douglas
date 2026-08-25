@@ -1,28 +1,36 @@
-# DG Data Grid — Portfólio
+# DG Data Grid — Portfólio V2
 
-Redesign do portfólio pessoal de Douglas Godoi com posicionamento técnico em:
+Esta versão mantém o layout que você já aprovou, especialmente o HERO com:
+- título grande à esquerda;
+- terminal/pipeline à direita;
+- chips Python, SQL e Power BI;
+- atalhos DATA / AUTO / BI / DEV.
 
-- Dados e ETL
-- Automação de processos
-- Business Intelligence
-- Integrações e desenvolvimento de soluções
+## O que foi adicionado
 
-## Arquivos principais
+- Logo real da DG Data Grid no header e no rodapé.
+- Fundo tecnológico animado com conexões de rede/sinapses de dados.
+- Circuitos e linhas digitais sutis.
+- Órbitas e pontos de dados atrás do terminal.
+- Logo DG em watermark muito discreta no HERO.
+- Faixa institucional DG Data Grid antes do footer.
+- Respeito a `prefers-reduced-motion` e redução automática da complexidade no mobile.
 
+## Arquivos para substituir
+
+Substitua no seu repositório:
 - `index.html`
 - `css/style.css`
 - `js/script.js`
 
-## Como substituir no GitHub
+E adicione na pasta `img/`:
+- `dg-logo.png`
+- `dg-data-grid-banner.png` (incluído como ativo da marca; esta versão não usa o banner como HERO para preservar o layout atual)
 
-1. Substitua o `index.html` da raiz.
-2. Substitua `css/style.css`.
-3. Substitua `js/script.js`.
-4. Mantenha suas pastas `img/` e `documentos/`, pois o site utiliza:
-   - `img/douglas.jpeg`
-   - `documentos/curriculo_douglas.pdf`
-5. Faça commit e aguarde a atualização do GitHub Pages/Netlify, se estiver usando.
+Mantenha também os arquivos que seu projeto já possui, especialmente:
+- `img/douglas.jpeg`
+- `documentos/curriculo_douglas.pdf`
 
-## Contato configurado
+## Observação importante
 
-WhatsApp: (41) 99610-5506
+O `script.js` está dentro do ZIP para evitar o problema que seu navegador apresentou ao baixar arquivos `.js` diretamente.
