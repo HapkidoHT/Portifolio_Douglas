@@ -1,32 +1,28 @@
-<<<<<<< HEAD
-💼 Portfólio Pessoal – Douglas
-Este projeto é meu portfólio pessoal, desenvolvido com foco em apresentar minhas habilidades e projetos na área de desenvolvimento web. Utilizando HTML, CSS e JavaScript, busco criar uma interface limpa e responsiva que reflita minha identidade profissional.
+# DG Data Grid — Portfólio
 
-🚀 Tecnologias Utilizadas
-HTML5: Estruturação semântica do conteúdo.
+Redesign do portfólio pessoal de Douglas Godoi com posicionamento técnico em:
 
-CSS3: Estilização e responsividade.
+- Dados e ETL
+- Automação de processos
+- Business Intelligence
+- Integrações e desenvolvimento de soluções
 
-JavaScript: Interatividade e dinamismo.
+## Arquivos principais
 
-📌 Funcionalidades
-Design responsivo para diferentes dispositivos.
+- `index.html`
+- `css/style.css`
+- `js/script.js`
 
-Seções dedicadas a projetos, habilidades e contato.
+## Como substituir no GitHub
 
-Navegação intuitiva e amigável.
+1. Substitua o `index.html` da raiz.
+2. Substitua `css/style.css`.
+3. Substitua `js/script.js`.
+4. Mantenha suas pastas `img/` e `documentos/`, pois o site utiliza:
+   - `img/douglas.jpeg`
+   - `documentos/curriculo_douglas.pdf`
+5. Faça commit e aguarde a atualização do GitHub Pages/Netlify, se estiver usando.
 
-🔧 Em Desenvolvimento
-Este portfólio está em constante aprimoramento. Novas funcionalidades e melhorias de design serão implementadas regularmente para melhor representar minha trajetória e competências.
+## Contato configurado
 
-=======
-# Portifolio_Douglas
-
-Portfólio pessoal, em constante desenvolvimento. 
-
-- Desenvolvimento de dashboards.
-- Aplicações práticas web. 
-- Aplicações de ETL em banco de dados. 
-
-Estrutura completa. 
->>>>>>> b3c7ee416d3338a6baeb3d13bbf05ffb5b04bee5
+WhatsApp: (41) 99610-5506
