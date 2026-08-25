@@ -301,3 +301,329 @@ img{max-width:100%;display:block}
   .contact-card{padding:24px}
   .photo-badge{right:-8px}
 }
+
+
+/* =========================================================
+   DG DATA GRID V2 — CAMADA VISUAL TECH / NETWORK
+   Mantém o layout original e adiciona profundidade tecnológica.
+   ========================================================= */
+
+#network-bg{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:-5;
+  opacity:.78;
+}
+
+.circuit-layer{
+  position:fixed;
+  inset:0;
+  z-index:-4;
+  pointer-events:none;
+  opacity:.34;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,transparent 0 8%,rgba(45,153,255,.055) 8% 8.08%,transparent 8.08% 100%),
+    linear-gradient(0deg,transparent 0 14%,rgba(69,230,255,.04) 14% 14.08%,transparent 14.08% 100%);
+  background-size:240px 190px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.95),rgba(0,0,0,.42) 72%,transparent 100%);
+}
+
+.circuit-layer::before,
+.circuit-layer::after{
+  content:"";
+  position:absolute;
+  width:46vw;
+  height:46vw;
+  min-width:520px;
+  min-height:520px;
+  border-radius:50%;
+  border:1px solid rgba(66,181,255,.09);
+  box-shadow:
+    0 0 0 38px rgba(66,181,255,.018),
+    0 0 0 84px rgba(66,181,255,.014),
+    0 0 110px rgba(31,142,255,.06);
+}
+.circuit-layer::before{left:-22vw;top:12vh}
+.circuit-layer::after{right:-25vw;top:42vh}
+
+.grid-bg{
+  opacity:.22;
+  background-size:56px 56px;
+}
+
+.brand-logo-wrap{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:15px;
+  overflow:hidden;
+  background:rgba(7,17,31,.7);
+  border:1px solid rgba(84,188,255,.2);
+  box-shadow:0 0 28px rgba(40,152,255,.14);
+}
+.brand-logo{
+  width:48px;
+  height:48px;
+  object-fit:cover;
+  transform:scale(1.12);
+}
+
+.header{
+  box-shadow:0 14px 45px rgba(0,0,0,.12);
+}
+
+.hero{
+  isolation:isolate;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:760px;
+  height:760px;
+  right:-210px;
+  top:70px;
+  border-radius:50%;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    repeating-radial-gradient(circle at center,
+      transparent 0 56px,
+      rgba(62,172,255,.025) 57px 58px,
+      transparent 59px 92px);
+  opacity:.7;
+}
+
+.hero-content{
+  position:relative;
+}
+.hero-content::after{
+  content:"";
+  position:absolute;
+  left:-4vw;
+  top:10%;
+  width:1px;
+  height:54%;
+  background:linear-gradient(to bottom,transparent,var(--cyan),transparent);
+  opacity:.16;
+}
+
+.hero-visual{
+  isolation:isolate;
+}
+.hero-network-orbit{
+  position:absolute;
+  width:min(42vw,570px);
+  aspect-ratio:1;
+  border:1px solid rgba(77,183,255,.12);
+  border-radius:50%;
+  z-index:-1;
+  animation:orbitSlow 26s linear infinite;
+}
+.hero-network-orbit::before,
+.hero-network-orbit::after{
+  content:"";
+  position:absolute;
+  inset:12%;
+  border:1px dashed rgba(70,214,255,.08);
+  border-radius:50%;
+}
+.hero-network-orbit::after{
+  inset:28%;
+  border-style:solid;
+  border-color:rgba(64,152,255,.1);
+}
+.hero-network-orbit span{
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 18px var(--cyan);
+}
+.hero-network-orbit span:nth-child(1){left:7%;top:48%}
+.hero-network-orbit span:nth-child(2){right:14%;top:22%}
+.hero-network-orbit span:nth-child(3){right:9%;bottom:21%}
+@keyframes orbitSlow{to{transform:rotate(360deg)}}
+
+.hero-logo-watermark{
+  position:absolute;
+  width:min(30vw,360px);
+  opacity:.032;
+  filter:saturate(1.3) drop-shadow(0 0 40px rgba(44,160,255,.25));
+  z-index:-1;
+  right:2%;
+  top:50%;
+  transform:translateY(-50%);
+  border-radius:50%;
+}
+
+.terminal-card{
+  backdrop-filter:blur(15px);
+  box-shadow:
+    0 40px 110px rgba(0,0,0,.42),
+    0 0 80px rgba(40,152,255,.1),
+    inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+.terminal-card::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:1px;
+  right:28px;
+  top:88px;
+  background:linear-gradient(90deg,transparent,rgba(58,219,255,.55),transparent);
+  box-shadow:0 0 20px rgba(58,219,255,.3);
+  animation:scanline 4.4s ease-in-out infinite;
+}
+@keyframes scanline{
+  0%,100%{transform:translateY(0);opacity:.15}
+  50%{transform:translateY(310px);opacity:.62}
+}
+
+.service-card,
+.case-card,
+.stack-item,
+.contact-card{
+  backdrop-filter:blur(10px);
+}
+
+.service-card:hover,
+.case-card:hover,
+.stack-item:hover{
+  box-shadow:0 22px 60px rgba(0,0,0,.22),0 0 34px rgba(43,153,255,.055);
+}
+
+.stack-item{
+  transition:.24s ease;
+}
+.stack-item:hover{
+  transform:translateY(-5px);
+  border-color:rgba(69,230,255,.2);
+}
+
+.brand-signature{
+  padding:18px 7vw 82px;
+  position:relative;
+}
+.brand-signature-inner{
+  max-width:1240px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:22px;
+  min-height:116px;
+  padding:20px 25px;
+  border-radius:24px;
+  background:
+    linear-gradient(90deg,rgba(28,108,190,.12),rgba(13,27,49,.72) 35%,rgba(9,18,34,.78));
+  border:1px solid rgba(91,185,255,.13);
+  box-shadow:0 24px 65px rgba(0,0,0,.2);
+  overflow:hidden;
+  position:relative;
+}
+.brand-signature-inner::after{
+  content:"";
+  position:absolute;
+  inset:auto -10% -90px 35%;
+  height:130px;
+  background:radial-gradient(ellipse at center,rgba(41,159,255,.16),transparent 65%);
+  pointer-events:none;
+}
+.signature-logo{
+  width:74px;
+  height:74px;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid rgba(89,187,255,.16);
+}
+.brand-signature-inner>div{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+.brand-signature-inner span{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.67rem;
+  color:var(--cyan);
+  letter-spacing:.12em;
+}
+.brand-signature-inner strong{
+  font-size:clamp(1rem,2vw,1.42rem);
+}
+.brand-signature-inner>a{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:#caeaff;
+  border:1px solid rgba(90,179,255,.18);
+  padding:12px 15px;
+  border-radius:12px;
+  font-size:.78rem;
+  font-weight:700;
+  transition:.22s;
+}
+.brand-signature-inner>a:hover{
+  background:rgba(40,152,255,.08);
+  border-color:rgba(69,230,255,.3);
+  transform:translateX(3px);
+}
+
+.brand-mini{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:9px;
+}
+.brand-mini img{
+  width:28px;
+  height:28px;
+  border-radius:7px;
+  object-fit:cover;
+}
+.brand-mini span{
+  color:#dcecff;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-network-orbit,
+  .terminal-card::before{
+    animation:none!important;
+  }
+}
+@media (max-width:820px){
+  .brand-signature-inner{
+    grid-template-columns:auto 1fr;
+  }
+  .brand-signature-inner>a{
+    grid-column:1/-1;
+    justify-content:center;
+  }
+  .hero-logo-watermark{
+    width:260px;
+  }
+}
+@media (max-width:520px){
+  .brand-logo-wrap,
+  .brand-logo{
+    width:42px;
+    height:42px;
+  }
+  .brand-signature-inner{
+    grid-template-columns:1fr;
+    text-align:center;
+    justify-items:center;
+  }
+  .brand-signature-inner>a{
+    grid-column:auto;
+    width:100%;
+  }
+  .hero-network-orbit{width:92vw}
+}
