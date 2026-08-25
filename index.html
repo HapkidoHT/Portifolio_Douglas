@@ -1,140 +1,336 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Douglas Godoi - Cientista de Dados</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DG Data Grid — portfólio técnico de Douglas Godoi em dados, automação de processos, BI e desenvolvimento de soluções." />
+  <meta name="theme-color" content="#050816" />
+  <title>DG Data Grid | Douglas Godoi</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <div class="grid-bg"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
 
-    <header class="header">
-        <a href="#home" class="logo">Douglas Godoi</a>
-        <nav class="navbar">
-            <a href="#home">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#contato">Contato</a>
-        </nav>
-        <button id="menu-btn" class="fas fa-bars"></button>
-    </header>
-
-    <section class="home" id="home">
-        <div class="home-content">
-            <div class="text-content">
-                <h3>Olá, eu sou</h3>
-                <h1>Douglas Godoi</h1>
-                <h2>Cientista de Dados <span>&</span> Desenvolvedor</h2>
-                <p>Transformando dados em insights e soluções inovadoras com Python, Machine Learning e Automação.</p>
-                <div class="social-links">
-                    <a href="https://github.com/HapkidoHT" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/douglas-degodoi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <a href="documentos/curriculo_douglas.pdf" class="btn" download>Download CV <i class="fas fa-download"></i></a>
-            </div>
-            <div class="image-content">
-                <img src="img/douglas.jpeg" alt="Foto de Douglas Godoi">
-            </div>
-        </div>
-    </section>
-
-    <section class="sobre" id="sobre">
-        <h2 class="heading">Sobre <span>Mim</span></h2>
-        <div class="sobre-container">
-            <div class="info">
-                <h3>Minha Jornada</h3>
-                <p>
-                    Com formação em Automação Industrial e pós-graduações em Engenharia de Manutenção 4.0 e IA & Machine Learning, minha paixão é resolver problemas complexos. Atuo como Cientista de Dados, criando soluções que otimizam processos e geram valor através da análise de dados e desenvolvimento de automações.
-                </p>
-                <ul>
-                    <li><strong>De:</strong> Curitiba, PR</li>
-                    <li><strong>Idade:</strong> 30 Anos</li>
-                    <li><strong>Status:</strong> Casado</li>
-                    <li><strong>Hobbies:</strong> Hapkido, Rock e RPG</li>
-                </ul>
-            </div>
-            <div class="habilidades">
-                <h3>Minhas <span>Habilidades</span></h3>
-                    <div class="skills-grid">
-                        <div class="skill-card" data-info="Pandas, Selenium, BeautifulSoup, Matplotlib, Numpy, Scikit-learn, Web Scraping, Machine Learning, Análise de Dados."><i class="fab fa-python"></i><span>Python</span></div>
-                        <div class="skill-card" data-info="DAX, Power Query, Linguagem M, Dashboards Interativos, ETL."><i class="fas fa-chart-line"></i><span>Power BI</span></div>
-                        <div class="skill-card" data-info="Consultas complexas, Joins, Stored Procedures, Modelagem de Dados."><i class="fas fa-database"></i><span>SQL</span></div>
-                        <div class="skill-card" data-info="Versionamento de código, colaboração em equipe, branches, merges."><i class="fab fa-git-alt"></i><span>Git</span></div>
-                        <div class="skill-card" data-info="Automação de planilhas, desenvolvimento de sistemas, processos ETL."><i class="fas fa-file-excel"></i><span>VBA/Excel</span></div>
-                        <div class="skill-card" data-info="Criação de contêineres para ambientes de desenvolvimento e produção."><i class="fab fa-docker"></i><span>Docker</span></div>
-                        <div class="skill-card" data-info="Desenvolvimento de lógica de frontend, manipulação de DOM, requisições assíncronas."><i class="fab fa-js"></i><span>JavaScript</span></div>
-                        <div class="skill-card" data-info="Desenvolvimento backend, APIs RESTful, microserviços, Express.js."><i class="fab fa-node-js"></i><span>Node.js</span></div>
-                        <div class="skill-card" data-info="Estruturação de páginas web para projetos e web scraping."><i class="fab fa-html5"></i><span>HTML5</span></div>
-                        <div class="skill-card" data-info="Estilização e criação de layouts responsivos."><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Meu <span>Portfólio</span></h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <img src="img/git_portfolio.jpg" alt="Projeto 1">
-                <div class="card-layer">
-                    <h4>Projetos no GitHub</h4>
-                    <p>Repositório com diversos projetos de automação, análise de dados e web scraping.</p>
-                    <a href="https://github.com/HapkidoHT" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <img src="img/menzie.jpg" alt="Projeto 2">
-                <div class="card-layer">
-                    <h4>E-commerce Menzie Bolsas</h4>
-                    <p>Aplicação web para um e-commerce, desenvolvida com foco em front-end.</p>
-                    <a href="https://menzie-bolsas.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <img src="https://via.placeholder.com/400x300.png?text=Dashboard+LinkedIn" alt="Dashboard LinkedIn">
-                <div class="card-layer">
-                    <h4>Dashboard de Análise</h4>
-                    <p>Postagem no LinkedIn detalhando um projeto de dashboard interativo em Power BI.</p>
-                    <a href="https://www.linkedin.com/feed/update/urn:li:share:7271917555643031553" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contato" id="contato">
-        <h2 class="heading">Fale <span>Comigo</span></h2>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Seu E-mail" required>
-            <input type="text" name="subject" placeholder="Assunto" required>
-            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
-            <button type="submit" class="btn">Enviar Mensagem <i class="fas fa-paper-plane"></i></button>
-        </form>
-    </section>
-    
-    <footer class="footer">
-        <p>&copy; 2025 Douglas Godoi. Todos os direitos reservados.</p>
-    </footer>
-
-    <div id="skillModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Aplicações da Habilidade:</h3>
-            <p id="skillInfo"></p>
-        </div>
-    </div>
-
-    <a href="https://wa.me/5541996105506" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+  <header class="header" id="topo">
+    <a href="#home" class="brand" aria-label="DG Data Grid">
+      <span class="brand-mark">DG</span>
+      <span class="brand-copy">
+        <strong>Data Grid</strong>
+        <small>DATA • AUTOMATION • BI</small>
+      </span>
     </a>
 
-    <script src="js/script.js"></script>
+    <nav class="navbar">
+      <a href="#home" class="active">Início</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#cases">Projetos</a>
+      <a href="#stack">Stack</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato" class="nav-cta">Contato</a>
+    </nav>
+
+    <button id="menu-btn" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          Engenharia aplicada a dados e processos
+        </div>
+
+        <h1>
+          Transformo dados e rotinas em
+          <span>soluções que trabalham por você.</span>
+        </h1>
+
+        <p class="hero-text">
+          Portfólio técnico de <strong>Douglas Godoi</strong> e apresentação da
+          <strong>DG Data Grid</strong>: análise de dados, automação de processos,
+          integrações, BI e desenvolvimento de soluções sob medida.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#cases" class="btn btn-primary">
+            Explorar projetos <i class="fas fa-arrow-right"></i>
+          </a>
+
+          <a href="https://wa.me/5541996105506" target="_blank" class="btn btn-ghost">
+            <i class="fab fa-whatsapp"></i> Falar comigo
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div><strong>DATA</strong><span>Análise & ETL</span></div>
+          <div><strong>AUTO</strong><span>Processos & Robôs</span></div>
+          <div><strong>BI</strong><span>Indicadores & Dashboards</span></div>
+          <div><strong>DEV</strong><span>Integrações & Soluções</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="terminal-card">
+          <div class="terminal-top">
+            <span></span><span></span><span></span>
+            <small>dg-data-grid / pipeline.py</small>
+          </div>
+
+          <pre><code><span class="code-blue">class</span> <span class="code-cyan">DataGrid</span>:
+    <span class="code-blue">def</span> <span class="code-green">solve</span>(self, process):
+        data = self.<span class="code-cyan">extract</span>(process)
+        flow = self.<span class="code-cyan">automate</span>(data)
+        insight = self.<span class="code-cyan">analyze</span>(flow)
+        <span class="code-blue">return</span> <span class="code-green">value</span>(insight)
+
+<span class="code-muted"># status</span>
+<span class="code-green">● pipeline online</span></code></pre>
+
+          <div class="data-stream">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="floating-chip chip-1"><i class="fab fa-python"></i> Python</div>
+        <div class="floating-chip chip-2"><i class="fas fa-database"></i> SQL</div>
+        <div class="floating-chip chip-3"><i class="fas fa-chart-line"></i> Power BI</div>
+      </div>
+    </section>
+
+    <section class="section" id="expertise">
+      <div class="section-title reveal">
+        <span>01 / EXPERTISE</span>
+        <h2>Da operação manual ao fluxo inteligente.</h2>
+        <p>Projetos pensados para reduzir retrabalho, organizar informação e transformar dados em decisão.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="icon-box"><i class="fas fa-gears"></i></div>
+          <h3>Automação de Processos</h3>
+          <p>Automação de tarefas repetitivas, entrada de dados, planilhas, sistemas web e aplicações desktop.</p>
+          <div class="tags">
+            <span>Python</span><span>Selenium</span><span>VBA</span><span>RPA</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon-box"><i class="fas fa-database"></i></div>
+          <h3>Dados & ETL</h3>
+          <p>Extração, tratamento, transformação e integração de dados para criar bases confiáveis e prontas para análise.</p>
+          <div class="tags">
+            <span>SQL</span><span>Pandas</span><span>Power Query</span><span>APIs</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon-box"><i class="fas fa-chart-simple"></i></div>
+          <h3>Business Intelligence</h3>
+          <p>Dashboards e indicadores para transformar operações em uma visão clara, rastreável e orientada a resultados.</p>
+          <div class="tags">
+            <span>Power BI</span><span>DAX</span><span>KPIs</span><span>Analytics</span>
+          </div>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="icon-box"><i class="fas fa-code-branch"></i></div>
+          <h3>Integrações & Soluções</h3>
+          <p>Conexão entre sistemas, APIs, bancos de dados e aplicações para eliminar ilhas de informação e criar fluxos contínuos.</p>
+          <div class="tags">
+            <span>REST</span><span>PostgreSQL</span><span>JavaScript</span><span>Git</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="cases">
+      <div class="section-title reveal">
+        <span>02 / PROJETOS</span>
+        <h2>Portfólio orientado a problemas reais.</h2>
+        <p>Uma seleção de frentes técnicas que representam como penso, construo e entrego soluções.</p>
+      </div>
+
+      <div class="cases-grid">
+        <article class="case-card featured reveal">
+          <div class="case-head">
+            <span class="case-type">AUTOMAÇÃO</span>
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Automação de processos operacionais</h3>
+          <p>Robôs e rotinas para leitura de bases, validação de regras e preenchimento de sistemas, reduzindo esforço manual e padronizando a execução.</p>
+
+          <div class="case-flow">
+            <span>Excel / PDF</span>
+            <i class="fas fa-chevron-right"></i>
+            <span>Python</span>
+            <i class="fas fa-chevron-right"></i>
+            <span>Validação</span>
+            <i class="fas fa-chevron-right"></i>
+            <span>Sistema</span>
+          </div>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-head">
+            <span class="case-type">DATA & BI</span>
+            <i class="fas fa-chart-column"></i>
+          </div>
+          <h3>Dashboards e inteligência operacional</h3>
+          <p>Tratamento de dados, modelagem e indicadores para consolidar informações e apoiar decisões de negócio.</p>
+          <a href="https://www.linkedin.com/feed/update/urn:li:share:7271917555643031553" target="_blank" class="case-link">
+            Ver referência <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+        </article>
+
+        <article class="case-card reveal">
+          <div class="case-head">
+            <span class="case-type">CODE</span>
+            <i class="fab fa-github"></i>
+          </div>
+          <h3>Laboratório técnico no GitHub</h3>
+          <p>Projetos e experimentos envolvendo Python, dados, automação, web scraping e desenvolvimento.</p>
+          <a href="https://github.com/HapkidoHT" target="_blank" class="case-link">
+            Abrir GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="stack">
+      <div class="section-title reveal">
+        <span>03 / STACK</span>
+        <h2>Tecnologias que conectam a solução.</h2>
+      </div>
+
+      <div class="stack-grid reveal">
+        <div class="stack-item">
+          <i class="fab fa-python"></i>
+          <strong>Python</strong>
+          <small>Automação • Dados • Scraping</small>
+        </div>
+
+        <div class="stack-item">
+          <i class="fas fa-database"></i>
+          <strong>SQL</strong>
+          <small>PostgreSQL • Modelagem • Queries</small>
+        </div>
+
+        <div class="stack-item">
+          <i class="fas fa-chart-line"></i>
+          <strong>Power BI</strong>
+          <small>DAX • Power Query • Dashboards</small>
+        </div>
+
+        <div class="stack-item">
+          <i class="fas fa-file-excel"></i>
+          <strong>Excel / VBA</strong>
+          <small>Automação • Tratamento • Operação</small>
+        </div>
+
+        <div class="stack-item">
+          <i class="fab fa-js"></i>
+          <strong>JavaScript</strong>
+          <small>Web • Integrações • Front-end</small>
+        </div>
+
+        <div class="stack-item">
+          <i class="fab fa-git-alt"></i>
+          <strong>Git</strong>
+          <small>Versionamento • Fluxo de código</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="about-photo reveal">
+        <div class="photo-frame">
+          <img src="img/douglas.jpeg" alt="Douglas Godoi" />
+        </div>
+        <div class="photo-badge">
+          <span>DG</span>
+          <small>DATA GRID</small>
+        </div>
+      </div>
+
+      <div class="about-copy reveal">
+        <span class="section-kicker">04 / SOBRE</span>
+        <h2>Douglas Godoi</h2>
+        <h3>Dados, automação e tecnologia aplicados ao negócio.</h3>
+
+        <p>
+          Minha atuação combina visão de processo com desenvolvimento técnico.
+          O objetivo não é apenas criar código ou dashboards, mas entender o problema,
+          organizar o fluxo e construir uma solução que faça sentido na operação.
+        </p>
+
+        <p>
+          A <strong>DG Data Grid</strong> nasce como extensão desse trabalho:
+          uma identidade para projetos de dados, automação, BI e integração de sistemas.
+        </p>
+
+        <div class="about-links">
+          <a href="documentos/curriculo_douglas.pdf" download class="btn btn-primary">
+            Baixar currículo <i class="fas fa-download"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/douglas-degodoi" target="_blank" class="btn btn-ghost">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato">
+      <div class="contact-card reveal">
+        <div>
+          <span class="section-kicker">05 / CONTATO</span>
+          <h2>Tem um processo que precisa ser automatizado ou dados que precisam virar decisão?</h2>
+          <p>Vamos conversar sobre o problema e desenhar a melhor abordagem técnica.</p>
+        </div>
+
+        <div class="contact-actions">
+          <a href="https://wa.me/5541996105506" target="_blank" class="contact-line">
+            <i class="fab fa-whatsapp"></i>
+            <span><small>WhatsApp</small>(41) 99610-5506</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/douglas-degodoi" target="_blank" class="contact-line">
+            <i class="fab fa-linkedin-in"></i>
+            <span><small>LinkedIn</small>Douglas Godoi</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+
+          <a href="https://github.com/HapkidoHT" target="_blank" class="contact-line">
+            <i class="fab fa-github"></i>
+            <span><small>GitHub</small>HapkidoHT</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="brand-mini"><span>DG</span> Data Grid</div>
+    <p>Dados • Automação • BI • Integrações</p>
+    <small>© <span id="year"></span> Douglas Godoi. Todos os direitos reservados.</small>
+  </footer>
+
+  <a href="https://wa.me/5541996105506" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
