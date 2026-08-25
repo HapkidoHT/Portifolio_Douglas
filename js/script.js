@@ -1,52 +1,72 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menu-btn');
+  const navbar = document.querySelector('.navbar');
+  const navLinks = document.querySelectorAll('.navbar a');
+  const year = document.getElementById('year');
 
-    // --- LÓGICA DO MENU HAMBÚRGUER ---
-    const menuBtn = document.getElementById('menu-btn');
-    const navbar = document.querySelector('.navbar');
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
-    menuBtn.onclick = () => {
-        menuBtn.classList.toggle('fa-times');
-        navbar.classList.toggle('active');
-    };
+  menuBtn?.addEventListener('click', () => {
+    navbar.classList.toggle('active');
 
-    // Fecha o menu ao clicar em um link
-    document.querySelectorAll('.navbar a').forEach(link => {
-        link.onclick = () => {
-            menuBtn.classList.remove('fa-times');
-            navbar.classList.remove('active');
-        };
+    const icon = menuBtn.querySelector('i');
+    if (icon) {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navbar.classList.remove('active');
+      const icon = menuBtn?.querySelector('i');
+      if (icon) {
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+      }
+    });
+  });
+
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  const sections = document.querySelectorAll('main section[id]');
+
+  const activateMenu = () => {
+    const scrollPosition = window.scrollY + 140;
+    let currentSection = 'home';
+
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        currentSection = section.id;
+      }
     });
 
-    // --- LÓGICA DO MODAL DE HABILIDADES ---
-    const skillCards = document.querySelectorAll('.skill-card');
-    const modal = document.getElementById('skillModal');
-    const modalInfo = document.getElementById('skillInfo');
-    const closeBtn = document.querySelector('.close-btn');
-
-    skillCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const info = card.getAttribute('data-info');
-            modalInfo.textContent = info;
-            modal.style.display = 'block';
-        });
+    navLinks.forEach(link => {
+      link.classList.toggle(
+        'active',
+        link.getAttribute('href') === `#${currentSection}`
+      );
     });
+  };
 
-    // Função para fechar o modal
-    const closeModal = () => {
-        modal.style.display = 'none';
-    };
-
-    // Eventos para fechar o modal
-    closeBtn.addEventListener('click', closeModal);
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            closeModal();
-        }
-    });
-    window.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            closeModal();
-        }
-    });
-
+  window.addEventListener('scroll', activateMenu, { passive: true });
+  activateMenu();
 });
